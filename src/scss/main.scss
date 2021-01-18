@@ -9,9 +9,11 @@ $primary-font: "Karrik", Helvetica, Arial, sans-serif;
 body {
   background: $background-color;
   font-family: $primary-font;
-  min-height: 100vh;
-  min-width: 100vh;
   overflow: hidden;
+
+  @media screen and (max-width: 800px) {
+    overflow: auto;
+  }
 }
 
 h3 {
@@ -20,6 +22,108 @@ h3 {
   margin-bottom: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 375px) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @media screen and (max-width: 950px) {
+    padding: 25px;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 60px 25px 25px;
+  }
+
+  @media screen and (max-width: 375px) {
+    height: auto;
+  }
+}
+
+.image-wrapper {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 50px;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 40%;
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 50%;
+    margin: 0 auto 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: 70%;
+  }
+}
+
+.joke-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -100px;
+
+  .joke {
+    font-size: 68px;
+    line-height: 1.15;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 60%;
+    margin-top: -60px;
+
+    .joke {
+      font-size: 56px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .joke {
+      font-size: 48px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .joke {
+      font-size: 36px;
+    }
+  }
 }
 
 .btn {
@@ -36,21 +140,24 @@ h3 {
   transition: all 400ms ease;
   max-width: 225px;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     background-color: $transparent;
     color: $highlight-color;
     border-color: $highlight-color;
   }
-}
 
-.joke {
-  font-size: 68px;
-  line-height: 1.15;
-}
+  @media screen and (max-width: 500px) {
+    margin-top: 40px;
+    font-size: 18px;
+  }
 
-.illustration {
-  width: 500px;
+  @media screen and (max-width: 375px) {
+    font-size: 16px;
+    padding: 8px 30px;
+    margin-top: 30px;
+  }
 }
 
 footer {
@@ -75,7 +182,8 @@ footer {
     transition: all 300ms ease;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-bottom: 2px solid rgba(234, 66, 40, 1);
     }
   }
@@ -84,6 +192,21 @@ footer {
     width: 14px;
     height: 14px;
     margin: 0px 2px 2px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 20px;
+    top: 0;
+
+    p,
+    a {
+      text-align: center;
+      font-size: 14px;
+    }
+    img {
+      width: 11px;
+      height: 11px;
+    }
   }
 }
 
