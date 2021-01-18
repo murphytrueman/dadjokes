@@ -1,0 +1,97 @@
+$background-color: #fee5d2;
+$primary-color: #21120d;
+$highlight-color: #ea4228;
+$light-text: #ffffff;
+$transparent: rgba(0, 0, 0, 0);
+
+$primary-font: "Karrik", Helvetica, Arial, sans-serif;
+
+body {
+  background: $background-color;
+  font-family: $primary-font;
+  min-height: 100vh;
+  min-width: 100vh;
+  overflow: hidden;
+}
+
+h3 {
+  color: $highlight-color;
+  font-size: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: $highlight-color;
+  color: $light-text;
+  border: 2px solid $transparent;
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 1px;
+  padding: 10px 40px;
+  border-radius: 40px;
+  transition: all 400ms ease;
+  max-width: 225px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $transparent;
+    color: $highlight-color;
+    border-color: $highlight-color;
+  }
+}
+
+.joke {
+  font-size: 68px;
+  line-height: 1.15;
+}
+
+.illustration {
+  width: 500px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+
+  p,
+  a {
+    font-size: 17px;
+    font-family: $primary-font;
+    color: $highlight-color;
+    text-align: right;
+  }
+
+  a {
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $transparent;
+    transition: all 300ms ease;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 2px solid rgba(234, 66, 40, 1);
+    }
+  }
+
+  img {
+    width: 14px;
+    height: 14px;
+    margin: 0px 2px 2px;
+  }
+}
+
+.stars-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 90px;
+  margin: 15px;
+}
