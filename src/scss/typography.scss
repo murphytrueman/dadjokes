@@ -1,4 +1,8 @@
 @font-face {
-  font-family: "Karrik";
-  src: url(/fonts/Karrik-Regular.woff2), url(/fonts/Karrik-Regular.woff);
+  font-family: "karrikregular";
+  src: url("../fonts/karrik-regular-webfont.woff2") format("woff2"),
+    url("../fonts/karrik-regular-webfont.woff") format("woff"),
+    url("../fonts/karrik-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
