@@ -133,6 +133,7 @@ h3 {
   max-width: 225px;
   cursor: pointer;
   outline: none;
+  z-index: 100;
 
   &:hover {
     background-color: $transparent;
@@ -140,10 +141,16 @@ h3 {
     border-color: $highlight-color;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 550px) {
     font-size: 18px;
     line-height: 18px;
     padding: 10px 40px 14px;
+
+    &:hover {
+      background-color: $highlight-color;
+      color: $light-text;
+      border-color: $highlight-color;
+    }
   }
 
   @media screen and (max-width: 375px) {
